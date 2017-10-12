@@ -1,0 +1,386 @@
+.navbar-toggler{
+  display: none;
+} 
+.nav-item{
+  list-style: none;
+}
+.navbar .navbar-nav{
+  float: right;
+}
+.navbar-wrapper{
+  background-color: #9470a2;
+}
+.staionColor{
+   list-style: none;
+   float: left;
+   margin: 20px 50px;
+   border-radius: 40px;
+   width: 70px;
+   height: 70px;
+}
+.white-text{
+  color:#fff;
+}
+.black-text{
+  color:#000;
+}
+.navbar-nav>li {
+  font-size: 20px;
+  margin: 15px;
+}
+.navbar-nav>li a{
+  color:#fff;
+}
+.navbar-nav>li a:hover{
+  text-decoration: none;
+}
+.staionColor h4{
+  text-align: center;
+  margin: 25px;
+}
+.navbar-brand{
+  color:#fff;
+}
+.navbar .navbar-brand{
+  font-size: 22px;
+}
+.yellow-text{
+  color:yellow;
+}
+.staionColor .white-text{
+  display: none;
+}
+.content-wrapper{
+  background-color: rgba(94, 65, 105, 0.48);
+  background: url(images/Metro_2trains_ddi-1880x1252-1-1880x1252.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:500px;
+
+}
+
+.stationDataWrapper{
+/*background: url(images/proastiakos_550_308.jpg) ;
+  opacity: 0.5;
+}
+/*.MetroImageWrapper{
+  background: url(images/hero-image-foggy-bottom-metro-station.jpg);
+/*  opacity: 0.5;
+/*  height:600px;*/
+}
+#metro_station{
+  width: 400px;
+  height: 35px;
+  margin: 30px auto;
+  display: block;
+  border: 2px solid #5f4269;
+}
+
+.station_info{
+  border: 1px solid #9470a2;
+  display: block;
+  background-color: #fff;
+  margin-bottom: 20px;
+  height:500px;
+
+}
+.station-map-wrapper{
+  width:50%;
+}
+.station-info-wrapper{
+  width:45%;
+  float: right;
+  border: 2px solid #b3a0bb;
+  height: 457px;
+  margin: 30px 15px;
+}
+.TrainIconWrapper{
+  display: block;
+  width: 95%;
+ /* border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  /*border: 1px solid #8c8080;*/
+  border-radius: 47%;
+  height: 145px;
+  margin:90px 10px;
+  float: left;
+}
+.TrainIconWrapper ul{
+  border-bottom: none;
+}
+
+.TrainIconWrapper .fa-train,.TrainIconWrapper .fa-bus{
+  color: lightslategray;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  padding: 15px 35px;
+  margin: 8px;
+}
+.TrainIconWrapper ul li a{
+  display: block;
+  position: relative;
+  left: 150px;
+  top: 0px;
+
+}
+.TrainIconWrapper button,.TrainIconWrapper button:hover,.TrainIconWrapper button:active,.TrainIconWrapper button:focus,.TrainIconWrapper button:active{
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+  border:none;
+}
+.TrainIconWrapper button{
+  padding:0 16px;
+}
+/*.TrainIconWrapper ul li a:hover,.TrainIconWrapper ul li a:focus,.TrainIconWrapper ul li a:active{
+  border-color:transparent;
+  background-color:transparent;
+}*/
+
+/*.TrainIconWrapper ul li .Bus_icon{
+  left: 150px;
+  top: 0px;
+}
+.TrainIconWrapper ul li .Train_icon{
+  left: 15px;
+  top: 0px;
+}*/
+.TrainIconWrapper h3{
+  color:#797070;
+  font-size: 26px;
+  font-weight: 300;
+  text-align: center;
+  padding-left: 25px;
+}
+/*.TrainIconWrapper .NextTrain,.TrainIconWrapper .NextBus{
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-radius: 47%;
+}*/
+
+.content .station_info .station-map-wrapper{
+  padding-bottom: 40%;
+  left: 25px;
+  top: 30px;
+}
+iframe{
+  position: relative;
+  bottom: 75px;
+  left: 0px;
+  height: 430px;
+  width: 600px;
+  display: block;
+}
+.station_title{
+  display: block;
+  width: 100%;
+
+}
+.station_title h1{
+  font-family: sans-serif;
+  color: #333;
+  margin: 40px;
+  text-align: center;
+  display: block;
+}
+.station_address{
+  display: block;
+  float: right;
+  width: 65%;
+}
+.station_address p{
+  display: block;
+  color: #988888;
+  font-size: 21px;
+  padding-left: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+.StationLineColor{
+  display: block;
+  float:left;
+  width:20%;
+}
+.rail-list{
+display: block;  
+}
+.rail-list li{
+  list-style: none;
+  float: right;
+  padding-left: 0px;
+  padding-right: 0px;
+}    
+.secandaryBarWrapper{
+  background-color: #5e4169;
+}
+.secandaryBar{
+  height:40px;
+}
+.modal-header{
+  background-color: #9470a2
+}
+.RD{
+  background-color: #c01f3c;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+}
+.red{
+  background-color: #c01f3c;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+}
+.OR{
+  background-color: #dc8927;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+}
+.orange{
+  background-color: #dc8927;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+
+}
+.BL{
+  background-color: #1f93d1;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+}
+.blue{
+  background-color: #1f93d1;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+
+}
+.SV{
+  background-color: #a1a3a1;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+}
+.silver{
+  background-color: #a1a3a1;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+
+}
+.GR{
+  background-color: #1db052;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+.green{
+  background-color: #1db052;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+}
+.YL{
+  background-color: #f4d415;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+}
+.yellow{
+  background-color: #f4d415;
+  border-radius: 50%;
+  font-size: x-large;
+  color: #fff;
+  padding: 8px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+}
+
+#RD{
+  background-color: #c01f3c;
+  margin: 60px 50px;
+}
+#YL{
+  background-color: #f4d415;
+  margin: 10px 50px;
+}
+#BL{
+  background-color: #1f93d1;
+  margin: 60px 50px;
+}
+#SV{
+  background-color: #a1a3a1;
+  margin: 10px 50px;
+}
+#OR{
+  background-color: #dc8927;
+  margin: 60px 50px;
+}
+#GR{
+  background-color: #1db052;
+  margin: 60px 50px;
+}
+.footer-wrapper{
+  background-color: #9470a2;
+
+}

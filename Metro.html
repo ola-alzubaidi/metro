@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+
+	<!-- Header -->
+	  <header class="container-fluid navbar-wrapper">
+		   <div class="container">
+			    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			    	<div class="navbar-brand"><span class="yellow-text">M</span>etro<span class="yellow-text">S</span>tation</div>
+			    
+			      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+		             <span class="navbar-toggler-icon"></span>
+		          </button>
+
+					  <div class="collapse navbar-collapse" id="navbarContent">
+						    <ul class="navbar-nav mr-auto">
+						      <li class="nav-item active">
+							    <a class="nav-link" href="#">Home</a>	
+						      </li>
+						      <li class="nav-item">
+							    <a class="nav-link" href="#">Maps</a>	
+						      </li>
+						      <li class="nav-item">
+							    <a class="nav-link" href="#">Services</a>	
+						      </li>
+						      <li class="nav-item">
+							    <a class="nav-link" href="#">About Metro</a>	
+						      </li>
+						    </ul>
+					   </div>
+			    </nav>
+			</div>
+
+			
+	  </header>
+	  <section class="container-fluid secandaryBarWrapper">
+	  	<div class="container">
+	      <div class="secandaryBar">
+	      </div>
+	  </div>
+
+	  </section>
+	 <!--  <section class="container-fluid MetroImageWrapper">
+	  	<div>
+	  	</div>
+	  </section> -->
+	  <section class="container-fluid content-wrapper">
+	      <div class="container">
+			  <div class="staionColor-wrapper">
+					  <ul>
+					  <li class="staionColor" id="RD"><h4 class="white-text">RD</h4></li>
+					  <li class="staionColor" id="YL"><h4 class="white-text">YL</h4></li>
+					  <li class="staionColor" id="BL"><h4 class="white-text">BL</h4></li>
+					  <li class="staionColor" id="OR"><h4 class="white-text">OR</h4></li>
+					  <li class="staionColor" id="SV"><h4 class="white-text">SV</h4></li>
+					  <li class="staionColor" id="GR"><h4 class="white-text">GR</h4></li>
+
+					  </ul>
+			  </div>
+		  </div>
+		        <div class="container">
+					  <div class="dropDown">
+							<select id="metro_station">
+
+
+							</select>
+														
+
+
+
+
+					  </div>
+				</div>
+			</section>
+					<!-- <div class="container"> -->
+				<DIV class="container-fluid stationDataWrapper">
+					<div class="container">
+						<div class="content">
+								<div class="station_info">
+									<div class="station-info-wrapper">
+
+										<div class="station_title">
+
+										</div>
+										<div class="station_address">
+
+										</div>
+
+										<div class="StationLineColor">
+												<ul class="rail-list">
+												 
+												</ul>
+									    </div>
+									    <div class="TrainIconWrapper">
+									        <ul class="nav nav-tabs">
+									        	<li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+												  <i class="fa fa-train" aria-hidden="true"></i>
+												  <h3>Next Train</h3>
+												    </button></li>
+											<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+											  <div class="modal-dialog" role="document">
+											    <div class="modal-content">
+											      <div class="modal-header">
+											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<!-- 											        <h4 class="modal-title" id="myModalLabel"></h4>
+ -->											      </div>
+									      <div class="modal-body">
+										        <div class="StaionDataWrapper table-responsive">
+												    <table class="table table-striped" id="station_data">
+																<thead>
+																  <tr>
+																    <th>Line</th>
+																    <th>destination</th>
+																    <th>Minutes</th>
+																  </tr>
+																</thead>
+																<tbody></tbody>
+													</table> 
+							              </div>
+                            	</div>
+
+    </div>
+  </div>
+
+											     <!-- <li role="presentation" class="NextTrain"><a href="" class="Train_icon"><i class="fa fa-train" aria-hidden="true"></i>
+													    <h3>Next Train</h3></a>
+												 </li> -->
+												 <li role="presentation" class="NextBus"><a href="" class="Bus_icon"><i class="fa fa-bus" aria-hidden="true"></i>
+													    <h3>Next Bus</h3></a>
+												 </li>
+											</ul>
+											   
+									    </div>
+										    
+    
+								    </div>
+
+						
+							
+						          <!-- <div class="row"> -->
+
+					                <!-- <div class="col-lg-12 col-md-12 col-sm-12"> -->
+					                <div class="station-map-wrapper embed-responsive embed-responsive-16by9">
+									      <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d49574.807139200166!2d-77.46446060000001!3d39.051217599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1504324893600" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+									    
+								    </div>
+									    
+									  
+							    </div>
+
+							    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+  
+
+								    
+
+						</div>
+					</div>
+
+				<!-- </div> -->
+	  </div>
+		  
+
+		
+	  <footer class="container-fluid footer-wrapper">
+		   <div class="container">
+			    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			    	<div class="navbar-brand"><span class="yellow-text">M</span>etro<span class="yellow-text">S</span>tation</div>
+
+					  <div class="collapse navbar-collapse">
+						    <ul class="navbar-nav mr-auto">
+						      <li class="nav-item active">
+							    <a class="nav-link" href="#">Home</a>	
+						      </li>
+						      <li class="nav-item">
+							    <a class="nav-link" href="#">About Metro</a>	
+						      </li>
+						    </ul>
+					   </div>
+			    </nav>
+			</div>
+
+			
+	  </footer>
+              
+
+		<script src="global.js"></script>
+	</body>
+</html>
+
+
