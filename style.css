@@ -1,3 +1,7 @@
+body{
+  font-family: 'Roboto', sans-serif !important;
+}
+
 .navbar-toggler{
   display: none;
 } 
@@ -18,12 +22,43 @@
    width: 70px;
    height: 70px;
 }
+.text-wrapper h4{
+  color:#000;
+  text-align: center;
+  margin-top: 25px;
+}
+.hvr-grow{
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+.staionColor-wrapper li{
+  border:1px solid #000;
+}
+.staionColor-wrapper li.active{
+  border:3px solid #111;
+}
+.staionColor-wrapper .staionColor:hover{
+  cursor: pointer;
+}
 .white-text{
   color:#fff;
 }
 .black-text{
   color:#000;
 }
+
 .navbar-nav>li {
   font-size: 20px;
   margin: 15px;
@@ -36,19 +71,20 @@
 }
 .staionColor h4{
   text-align: center;
-  margin: 25px;
+  margin: 25px 0;
 }
 .navbar-brand{
   color:#fff;
 }
 .navbar .navbar-brand{
-  font-size: 22px;
+  font-size: 23px;
+  padding: 25px 15px;
 }
 .yellow-text{
   color:yellow;
 }
-.staionColor .white-text{
-  display: none;
+.fa-heart{
+  color:red;
 }
 .content-wrapper{
   background-color: rgba(94, 65, 105, 0.48);
@@ -82,18 +118,24 @@
   display: block;
   background-color: #fff;
   margin-bottom: 20px;
-  height:500px;
+  height:445px;
 
 }
 .station-map-wrapper{
   width:50%;
 }
+#map {
+    height: 400px;
+    width: 100%;
+}
 .station-info-wrapper{
   width:45%;
   float: right;
   border: 2px solid #b3a0bb;
-  height: 457px;
+  height: 400px;
   margin: 30px 15px;
+  background-color: #f1f1f1;
+
 }
 .TrainIconWrapper{
   display: block;
@@ -103,11 +145,15 @@
   /*border: 1px solid #8c8080;*/
   border-radius: 47%;
   height: 145px;
-  margin:90px 10px;
   float: left;
 }
 .TrainIconWrapper ul{
   border-bottom: none;
+}
+.TrainIconWrapper ul li{
+  position: relative;
+  top:35px;
+  left:115px;
 }
 
 .TrainIconWrapper .fa-train,.TrainIconWrapper .fa-bus{
@@ -131,22 +177,7 @@
   outline: none;
   border:none;
 }
-.TrainIconWrapper button{
-  padding:0 16px;
-}
-/*.TrainIconWrapper ul li a:hover,.TrainIconWrapper ul li a:focus,.TrainIconWrapper ul li a:active{
-  border-color:transparent;
-  background-color:transparent;
-}*/
 
-/*.TrainIconWrapper ul li .Bus_icon{
-  left: 150px;
-  top: 0px;
-}
-.TrainIconWrapper ul li .Train_icon{
-  left: 15px;
-  top: 0px;
-}*/
 .TrainIconWrapper h3{
   color:#797070;
   font-size: 26px;
@@ -179,7 +210,6 @@ iframe{
 
 }
 .station_title h1{
-  font-family: sans-serif;
   color: #333;
   margin: 40px;
   text-align: center;
@@ -230,6 +260,7 @@ display: block;
   display: inline-block;
   width: 50px;
   height: 50px;
+  text-align: center;
 
 }
 .red{
@@ -252,6 +283,8 @@ display: block;
   display: inline-block;
   width: 50px;
   height: 50px;
+  text-align: center;
+
 
 }
 .orange{
@@ -275,6 +308,8 @@ display: block;
   display: inline-block;
   width: 50px;
   height: 50px;
+  text-align: center;
+
 
 }
 .blue{
@@ -298,6 +333,8 @@ display: block;
   display: inline-block;
   width: 50px;
   height: 50px;
+  text-align: center;
+
 
 }
 .silver{
@@ -321,6 +358,8 @@ display: block;
   display: inline-block;
   width: 50px;
   height: 50px;
+  text-align: center;
+
 }
 .green{
   background-color: #1db052;
@@ -342,6 +381,8 @@ display: block;
   display: inline-block;
   width: 50px;
   height: 50px;
+  text-align: center;
+
 
 }
 .yellow{
@@ -383,4 +424,7 @@ display: block;
 .footer-wrapper{
   background-color: #9470a2;
 
+}
+.footer-text{
+  font-size: 16px;
 }

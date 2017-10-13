@@ -1,16 +1,12 @@
 
 
-
 var params = {
-    "api_key": "e1eee2b5677f408da40af8480a5fd5a8",
-    //"LineCode": "RD"
-    // Request parameters
+    "api_key": "e1eee2b5677f408da40af8480a5fd5a8", //public key for test
 };
 
 function printError(msg){
     $('<h1>'+msg+'</h1>').appendTo('#rr');
 }
-
 
 function populateStations(lineCode){
     var params = {
@@ -54,6 +50,9 @@ function getStationInfo(selectedStationCode){
             var StationState = Stations[i].Address.State;
             var StationStreet = Stations[i].Address.Street;
             var StationZip = Stations[i].Address.Zip;
+            var lat = Stations[i].Lat;
+            var lon = Stations[i].Lon;
+
             
             if(Stations[i].Code === selectedStationCode ){
                 $('.station_title').html('<h1>'+StationName+'</h1>');
@@ -61,18 +60,19 @@ function getStationInfo(selectedStationCode){
             
                 $('.StationLineColor .rail-list').html('<li><span class="'+StationCode+'">'+StationCode+'</span></li>');
                 
-            };
-      
+                var stationGeoLocation = {lat: lat, lng: lon};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 12,
+                  center: stationGeoLocation
+                });
+                var marker = new google.maps.Marker({
+                  position: stationGeoLocation,
+                  map: map
+                });
 
-          //  var trainColor;
-          //  if(Stations[i].LineCode1 == 'RD'){
-          //       trainColor = 'red';
-          //   }
-          //   else if(Stations[i].LineCode1 == 'GR'){
-          //       trainColor = 'green';
-          //   }
-          // $('.stationColorWrapper').append('+trainColor+');
-           // }
+            };
+
+            
             
         }
     })
@@ -86,7 +86,7 @@ function getStationData(stationCode){
     var params = {
         "api_key": "e1eee2b5677f408da40af8480a5fd5a8",
          "StationCodes": "All"
-};
+    };
     // $('#station_data').hide();
     $.ajax({
         url: "https://api.wmata.com/StationPrediction.svc/json/GetPrediction/"+stationCode+"?" + $.param(params),
@@ -138,7 +138,12 @@ function getStationData(stationCode){
     });
 }
 
-
+function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+    });
+    $('.station_info').hide();
+}
 
 $(document).ready(function(){
 
@@ -146,12 +151,13 @@ $(document).ready(function(){
 
     $("#station_data").hide();
     $("#metro_station").hide();
-    $('.station_info').hide();
+    
     $('iframe').hide();
     // $(".aa").hide();
 
     // user select metro line
     $('.staionColor').on('click', function(){
+        $(this).addClass('active').siblings().removeClass('active');
         var stationColor = $(this).attr('id');
         $("#metro_station").html('<option value="Select Station">Select Station</option>').show();
         $('#station_data tbody').empty();
@@ -168,41 +174,15 @@ $(document).ready(function(){
         $('iframe').show();
     });
 
-    // $('.TrainIconWrapper .NextTrain').on('click', function(e){
-    //     e.preventDefault();
-    //     $("#station_data").show();
-    //     getStationData(selectedStationCode);
-    // });
-     
-    // 
-      $('.TrainIconWrapper button').on('click', function(e){
+    $('.TrainIconWrapper button').on('click', function(e){
         e.preventDefault();
         $('#myModal').show()
         $("#station_data").show();
         getStationData(selectedStationCode);
     });
    
-   
-
-//
-        
-
-    // $('#station_data').show();
-    // var stationCode= $(this).val();
-    // getStationData(stationCode);
-    // var Station_line= $(this).css("id");
-    // getStationColor(Station_line);
-    
-    // $(this).append('<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d49574.807139200166!2d-77.46446060000001!3d39.051217599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1504324893600" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');
-
-
-         // getStationInfo();
-        
     
 });
-
-
-
 
 
 
