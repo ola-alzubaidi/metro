@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	</head>
@@ -38,27 +38,57 @@
 		      	<div class="text-wrapper">
 		      	    <h4>CHOOSE A LINE</h4>
 		        </div>
-			  	<div class="staionColor-wrapper">
-					<ul>
-						<li class="staionColor hvr-grow" id="RD"><h4 class="white-text">RD</h4></li>
-						<li class="staionColor hvr-grow" id="YL"><h4 class="white-text">YL</h4></li>
-						<li class="staionColor hvr-grow" id="BL"><h4 class="white-text">BL</h4></li>
-						<li class="staionColor hvr-grow" id="OR"><h4 class="white-text">OR</h4></li>
-						<li class="staionColor hvr-grow" id="SV"><h4 class="white-text">SV</h4></li>
-						<li class="staionColor hvr-grow" id="GR"><h4 class="white-text">GR</h4></li>
-					</ul>
-			  	</div>
-		  	</div>
-		        <div class="container">
-					<div class="dropDown">
-						<select id="metro_station"></select>
-					</div>
-				</div>
-			</section>
-			<div class="container-fluid stationDataWrapper">
+		          <div class="color-container">             
+		        
+					  	<div class="staionColor-wrapper">
+							<ul>
+								<li class="staionColor hvr-grow">
+									<div class="station-color-inner" id="RD">
+										<h4 class="white-text">RD</h4>
+									</div>
+								</li>
+								<li class="staionColor hvr-grow">
+									<div class="station-color-inner" id="YL">
+										<h4 class="white-text">YL</h4>
+									</div>
+								</li>
+								<li class="staionColor hvr-grow">
+									<div class="station-color-inner" id="BL">
+										<h4 class="white-text">BL</h4>
+									</div>
+								</li>
+								<li class="staionColor hvr-grow">
+									<div class="station-color-inner" id="OR">
+										<h4 class="white-text">OR</h4>
+									</div>
+								</li>
+								<li class="staionColor hvr-grow">
+									<div class="station-color-inner" id="SV">
+										<h4 class="white-text">SV</h4>
+									</div>
+								</li>
+								<li class="staionColor hvr-grow">
+									<div class="station-color-inner" id="GR">
+										<h4 class="white-text">GR</h4>
+									</div>
+								</li>
+							</ul>
+					  	</div>
+		  	        </div>
+		         
+							<div class="dropDown">
+								<select id="metro_station"></select>
+							</div>
+			      </div>
+			</div>
+		</section>
+			<section class="container-fluid stationDataWrapper">
 				<div class="container">
 					<div class="content">
 						<div class="station_info">
+							<div class="station-map-wrapper">
+								<div id="map"></div>
+							</div>
 							<div class="station-info-wrapper">
 								<div class="station_title"></div>
 								<div class="station_address"></div>
@@ -76,14 +106,10 @@
 									</ul>
 								</div>
 							</div>
-
-					    <div class="station-map-wrapper embed-responsive embed-responsive-16by9">
-							<div id="map"></div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</section>
 	  	<footer class="container-fluid footer-wrapper">
 		   <div class="container">
 			    <nav class="navbar navbar-expand-lg navbar-light bg-light">
