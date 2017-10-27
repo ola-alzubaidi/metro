@@ -6874,7 +6874,6 @@ body {
   font-size: 26px;
   font-weight: 300;
   text-align: center;
-  padding-left: 25px;
 }
 .TrainIconWrapper .fa-train,
 .TrainIconWrapper .fa-bus {
@@ -6882,18 +6881,23 @@ body {
   width: 50px;
   height: 50px;
   font-size: 35px;
-  padding: 15px 35px;
-  margin: 8px;
+  padding: 15px 0px;
 }
 .TrainIconWrapper button,
 .TrainIconWrapper button:hover,
-.TrainIconWrapper button:active,
 .TrainIconWrapper button:focus,
 .TrainIconWrapper button:active {
   background-color: transparent;
   border-color: transparent;
   outline: none;
   border: none;
+  padding: 10px 35px;
+}
+.TrainIconWrapper .btn-primary:active:focus {
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+  padding: 10px 35px;
 }
 .station_title {
   display: block;
