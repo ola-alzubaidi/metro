@@ -1,7 +1,7 @@
 
 
 var params = {
-    "api_key": "e1eee2b5677f408da40af8480a5fd5a8", //public key for test
+    "api_key": "e13626d03d8e4c03ac07f95541b3091b", //public key for test
 };
 
 function printError(msg){
