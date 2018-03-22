@@ -1,7 +1,7 @@
 
-
+var apiKey = "e13626d03d8e4c03ac07f95541b3091b" //public key for test
 var params = {
-    "api_key": "e13626d03d8e4c03ac07f95541b3091b", //public key for test
+    "api_key": apiKey, 
 };
 
 function printError(msg){
@@ -10,7 +10,7 @@ function printError(msg){
 
 function populateStations(lineCode){
     var params = {
-        "api_key": "e13626d03d8e4c03ac07f95541b3091b",
+        "api_key": apiKey,
         "LineCode": lineCode
     };
     $.ajax({
@@ -33,7 +33,7 @@ function populateStations(lineCode){
 
 function getStationInfo(selectedStationCode){
     var params = {
-        "api_key": "e13626d03d8e4c03ac07f95541b3091b",
+        "api_key": apiKey,
          "LineCode": ""
       
     };
@@ -84,7 +84,7 @@ function getStationInfo(selectedStationCode){
 
 function getStationData(stationCode){
     var params = {
-        "api_key": "e13626d03d8e4c03ac07f95541b3091b",
+        "api_key": apiKey,
          "StationCodes": "All"
     };
     // $('#station_data').hide();
@@ -158,8 +158,8 @@ $(document).ready(function(){
     // user select metro line
     $('.staionColor').on('click', function(){
         $(this).addClass('active').siblings().removeClass('active');
-        var stationColor = $(this).attr('id');
-        $("#metro_station").html('<option value="Select Station">Select Station</option>').show();
+        var stationColor = $(this).find('.station-color-inner').attr('id');
+        $("#metro_station").html('<option value="">Select Station</option>').show();
         $('#station_data tbody').empty();
         // $('#station_data').hide();
         populateStations(stationColor);  
